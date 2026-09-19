@@ -51,10 +51,13 @@ jobs:
       - name: Type check (pyright)
         run: pyright
 
-      - name: Run tests
+      - name: Run tests with coverage
         env:
           IELTS_DATABASE_URL: postgresql+psycopg://ielts:test_password@localhost:5432/ielts_learning_test
-        run: pytest -v --tb=short
+        run: pytest -v --cov=app --cov-report=term-missing --tb=short
+
+      - name: Security audit (pip-audit)
+        run: pip-audit || true
 
       - name: Check migrations
         env:

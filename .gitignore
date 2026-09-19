@@ -56,17 +56,35 @@ Thumbs.db
 # Node / Web
 node_modules/
 
-# Database & Storage
+# Hermes local state / secrets / sessions
+.hermes/
+**/.hermes/
+*.log
+logs/
+
+# Local databases
 *.db
 *.sqlite
 *.sqlite3
-audio_storage/
-backups/
 
-# Hermes & Local Runtime
-.hermes/
-*.log
-logs/
+# Local audio / transcripts
+audio/
+audio_storage/
+recordings/
+transcripts/
+
+# Backups
+backups/
+*.dump
+*.sql.gz
+
+# OS / temp
+tmp/
+temp/
+.cache/
+
+# Local generated artifacts
+artifacts/
 
 # Environment Variables & Secrets
 .env
