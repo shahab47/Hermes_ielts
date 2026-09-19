@@ -1,23 +1,51 @@
+# IELTS Personal Learning Agent — Hermes Configuration
+# Profile: ielts-tutor
+
+# Model Configuration
+# Choose the best model based on evaluator benchmark results
 model:
-  default: "anthropic/claude-opus-4.6"  # Configurable - choose based on evaluator benchmark
+  default: "anthropic/claude-sonnet-4-20250514"  # Configurable per evaluator benchmark
   provider: "openrouter"
+  base_url: "https://openrouter.ai/api/v1"
+
+# Memory Configuration
 memory:
   provider: "honcho"
   memory_enabled: true
   user_profile_enabled: true
+  memory_char_limit: 2200
+
+# Telegram Gateway
 messaging:
   telegram:
-    allowed_users: []  # Add your Telegram user ID
+    allowed_users: []  # REQUIRED: Add your numeric Telegram user ID
+    # Example: allowed_users: [123456789]
+
+# Text-to-Speech
 tts:
   provider: "edge"
-  voice: "en-GB-SoniaNeural"  # Clear UK English
+  voice: "en-GB-SoniaNeural"  # Clear UK English female voice
+  speed: 1.0
+  # Alternative voices:
+  # en-GB-RyanNeural (male, UK)
+  # en-GB-LibbyNeural (female, UK)
+  # en-US-JennyNeural (female, US)
+
+# Speech-to-Text
 stt:
   provider: "faster-whisper"
-  model: "small"  # Use 'medium' or 'large-v3' on stronger hardware
-  language: "en"
+  model: "small"  # Options: tiny, base, small, medium, large-v3
+  language: "en"   # English language hint for better accuracy
+  # Use 'medium' or 'large-v3' on GPU-equipped hardware
+  # Use 'small' or 'base' on CPU-only VPS
+
+# Cron / Scheduled Routines
 cron:
-  allow_agent_scheduling: false  # Keep fixed routines initially
+  allow_agent_scheduling: false  # Keep fixed, version-controlled routines initially
+
+# MCP Servers
 mcp_servers:
   ielts-learning:
     command: "uvx"
-    args: ["ielts-learning-mcp"]
+    args: ["--from", "./apps/learning-service", "ielts-learning-mcp"]
+    # Provides: get_learner_profile, save_assessment, get_due_reviews, etc.

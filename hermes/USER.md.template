@@ -1,13 +1,23 @@
 # Learner Profile
 
-- **Name**: [Learner Name]
+## Basic Information
+- **Name**: [To be set during onboarding]
 - **Target Exam**: IELTS Academic
-- **Target Overall Band**: 7.5
-  - **Target Writing**: 7.0
-  - **Target Speaking**: 7.5
-  - **Target Reading**: 8.0
-  - **Target Listening**: 8.0
-- **Exam Date**: [YYYY-MM-DD or Not yet scheduled]
-- **Explanation Language Preference**: English (with bilingual clarification only upon request)
-- **Study Availability**: 45 minutes daily (morning / evening sessions)
-- **Current Focus**: Writing Task 2 coherence & cohesion; Speaking Part 2 fluency & topic development
+- **Target Overall Band**: [To be set]
+- **Exam Date**: [If known]
+- **Available Study Time**: [Daily/weekly hours]
+
+## Language Preferences
+- **Explanation Language**: Farsi (فارسی)
+- **Practice Language**: English
+- **TTS Enabled**: Yes
+
+## Current Focus
+- **Primary Bottleneck**: [Auto-detected after diagnostic]
+- **Priority Skills**: [Ranked by gap to target]
+- **Active Weaknesses**: [Top 3 from database]
+
+## Study Preferences
+- **Preferred Session Length**: [Detected from behavior]
+- **Best Study Times**: [Detected from behavior]
+- **Feedback Detail Level**: Detailed during reviews, concise during drills
