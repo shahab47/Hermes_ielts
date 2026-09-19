@@ -10,9 +10,10 @@ from sqlalchemy.ext.asyncio import async_engine_from_config
 
 from alembic import context
 
-# Import the Base metadata for autogenerate support
-# This will be populated as models are added in Phase 3
+# Import all models to ensure all tables are registered on Base.metadata
 try:
+    import app.content.models
+    import app.models  # noqa: F401
     from app.models.base import Base
 
     target_metadata = Base.metadata

@@ -67,3 +67,50 @@ async def test_mcp_tool_call_preflight() -> None:
     assert result_data["status"] == "success"
     assert result_data["data"]["task_type"] == "task_2"
     assert result_data["data"]["has_clear_position_markers"] is True
+
+
+@pytest.mark.asyncio
+async def test_mcp_tool_call_analyze_audio() -> None:
+    """Test calling analyze_audio via MCP."""
+    req = {
+        "jsonrpc": "2.0",
+        "id": 4,
+        "method": "tools/call",
+        "params": {
+            "name": "analyze_audio",
+            "arguments": {
+                "attempt_id": "att_123",
+                "segments": [
+                    {"text": "Well, my hometown is very peaceful", "start": 0.0, "end": 2.5},
+                    {"text": "and there are many scenic parks.", "start": 3.0, "end": 5.5},
+                ],
+                "total_duration_sec": 5.5,
+            },
+        },
+    }
+    resp = await handle_jsonrpc_request(req)
+    assert resp["jsonrpc"] == "2.0"
+    content = json.loads(resp["result"]["content"][0]["text"])
+    assert content["status"] == "success"
+    assert content["data"]["word_count"] > 0
+    assert "speech_rate_wpm" in content["data"]
+
+
+@pytest.mark.asyncio
+async def test_mcp_tools_full_coverage() -> None:
+    """Verify that all core categories are represented in the MCP tools registry."""
+    req = {"jsonrpc": "2.0", "id": 5, "method": "tools/list", "params": {}}
+    resp = await handle_jsonrpc_request(req)
+    tools = {t["name"] for t in resp["result"]["tools"]}
+
+    # Ensure at least 25 tools are exposed
+    assert len(tools) >= 25
+
+    # Check key tools from every section
+    assert "get_learner_profile" in tools
+    assert "get_active_weaknesses" in tools
+    assert "generate_daily_plan" in tools
+    assert "get_due_reviews" in tools
+    assert "search_learning_content" in tools
+    assert "get_progress_summary" in tools
+    assert "analyze_audio" in tools

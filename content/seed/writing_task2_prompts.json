@@ -1,0 +1,132 @@
+[
+  {
+    "id": "wt2_01",
+    "essay_type": "agree_disagree",
+    "topic": "Education & Technology",
+    "prompt": "In the future, artificial intelligence will replace human teachers in the classroom. To what extent do you agree or disagree?",
+    "model_outline": {
+      "introduction": "Paraphrase prompt + State clear thesis (Disagree: AI will assist but never fully replace human educators).",
+      "body_1": "Role of AI: Personalized pacing, automated grading, instant factual query resolution.",
+      "body_2": "Irreplaceable human role: Empathy, moral education, pedagogical intuition, motivating vulnerable learners.",
+      "conclusion": "Restate thesis: Symbiotic relationship where AI empowers teachers rather than displacing them."
+    },
+    "key_vocabulary": ["pedagogical", "cognitive development", "pastoral care", "empathy", "technological integration"]
+  },
+  {
+    "id": "wt2_02",
+    "essay_type": "discuss_both_views",
+    "topic": "Society & Economy",
+    "prompt": "Some people think that universities should provide graduates with the knowledge and skills needed in the workplace. Others think that the true function of a university should be to give access to knowledge for its own sake, regardless of whether the course is useful to an employer. Discuss both views and give your opinion.",
+    "model_outline": {
+      "introduction": "Paraphrase debate + State thesis (Both functions are vital, but vocational relevance must not eclipse intellectual inquiry).",
+      "body_1": "View 1: Workplace readiness fuels economic growth and reduces youth unemployment.",
+      "body_2": "View 2: Pure academic research fosters critical thinking, philosophical depth, and long-term societal progress.",
+      "conclusion": "Balanced synthesis: Higher education should marry practical employability with foundational theoretical knowledge."
+    },
+    "key_vocabulary": ["vocational training", "intellectual inquiry", "employability", "academic rigor", "holistic education"]
+  },
+  {
+    "id": "wt2_03",
+    "essay_type": "causes_solutions",
+    "topic": "Environment & Urbanization",
+    "prompt": "In many modern cities, traffic congestion is worsening day by day. What are the primary causes of this problem, and what practical solutions can be implemented?",
+    "model_outline": {
+      "introduction": "Paraphrase urban gridlock issue + Outline roadmap of causes and actionable countermeasures.",
+      "body_1": "Causes: Inadequate public transport infrastructure, suburban sprawl, cultural reliance on private vehicles.",
+      "body_2": "Solutions: Congestion pricing zones, investment in rapid mass transit, subsidizing cycling corridors.",
+      "conclusion": "Summary of points: Long-term urban viability hinges on transforming transit infrastructure."
+    },
+    "key_vocabulary": ["gridlock", "urban sprawl", "congestion charge", "mass transit", "infrastructure deficit"]
+  },
+  {
+    "id": "wt2_04",
+    "essay_type": "advantages_disadvantages",
+    "topic": "Work & Globalization",
+    "prompt": "An increasing number of professionals are now choosing to work remotely from home rather than commuting to physical offices. Do the advantages of this trend outweigh the disadvantages?",
+    "model_outline": {
+      "introduction": "Paraphrase telecommuting surge + State thesis (Advantages in flexibility and environmental impact surpass drawbacks).",
+      "body_1": "Advantages: Zero commute time, improved work-life integration, reduced carbon emissions from travel.",
+      "body_2": "Disadvantages & Mitigations: Social isolation and blurred domestic boundaries, mitigable via hybrid schedules.",
+      "conclusion": "Reiterate stance: Flexibility and productivity gains decisively outweigh the challenges."
+    },
+    "key_vocabulary": ["telecommuting", "work-life balance", "carbon footprint", "isolation", "hybrid workforce"]
+  },
+  {
+    "id": "wt2_05",
+    "essay_type": "direct_questions",
+    "topic": "Health & Lifestyle",
+    "prompt": "In many countries, obesity rates are rising rapidly among young people. Why is this happening, and who should take the primary responsibility for tackling this issue?",
+    "model_outline": {
+      "introduction": "Paraphrase adolescent obesity trend + Outline causes (sedentary lifestyles, ultra-processed diet) and responsibility.",
+      "body_1": "Reasons: Sedentary recreation (gaming, screens) combined with aggressive marketing of fast food.",
+      "body_2": "Responsibility: Shared accountability—parents cultivate dietary habits, but governments must regulate advertising and school nutrition.",
+      "conclusion": "Final synthesis: Multifaceted crisis necessitating joint familial and state intervention."
+    },
+    "key_vocabulary": ["sedentary", "nutritional literacy", "ultra-processed", "dietary habits", "statutory regulation"]
+  },
+  {
+    "id": "wt2_06",
+    "essay_type": "agree_disagree",
+    "topic": "Culture & Heritage",
+    "prompt": "Governments should allocate more public funds to preserving historic buildings and cultural heritage rather than investing in modern housing and infrastructure. To what extent do you agree or disagree?",
+    "model_outline": {
+      "introduction": "Paraphrase cultural expenditure vs basic infrastructure + State thesis (Disagree: Housing is a fundamental right that takes precedence).",
+      "body_1": "Importance of heritage: National identity, cultural continuity, tourism revenue.",
+      "body_2": "Priority of housing: Homelessness, urban overcrowding, basic human dignity demand public capital.",
+      "conclusion": "Balanced conclusion: While heritage deserves maintenance, human shelter remains the paramount duty of the state."
+    },
+    "key_vocabulary": ["cultural heritage", "architectural conservation", "affordable housing", "civic identity", "fiscal prioritization"]
+  },
+  {
+    "id": "wt2_07",
+    "essay_type": "discuss_both_views",
+    "topic": "Crime & Justice",
+    "prompt": "Some believe that lengthy prison sentences are the best way to reduce crime rates. Others argue that rehabilitation and community service are more effective. Discuss both views and give your opinion.",
+    "model_outline": {
+      "introduction": "Paraphrase punitive vs rehabilitative justice debate + State thesis (Rehabilitation is superior for long-term crime reduction).",
+      "body_1": "Punitive view: Deterrence effect, public protection, retributive justice for victims.",
+      "body_2": "Rehabilitative view: Addresses root causes of criminality (addiction, poverty, illiteracy), reduces recidivism.",
+      "conclusion": "Final verdict: Incarceration provides temporary safety, but rehabilitation guarantees lasting public security."
+    },
+    "key_vocabulary": ["deterrence", "recidivism", "rehabilitation", "custodial sentence", "restorative justice"]
+  },
+  {
+    "id": "wt2_08",
+    "essay_type": "advantages_disadvantages",
+    "topic": "Tourism & Environment",
+    "prompt": "International tourism has expanded significantly over recent decades, reaching even the most remote and fragile ecosystems. Do the benefits of this expansion outweigh the drawbacks?",
+    "model_outline": {
+      "introduction": "Paraphrase eco-tourism growth + State thesis (Environmental degradation significantly outweighs economic benefits in fragile zones).",
+      "body_1": "Benefits: Economic lifeline for indigenous communities, heightened global ecological awareness.",
+      "body_2": "Drawbacks: Soil erosion, habitat disruption, pollution, commodification of indigenous traditions.",
+      "conclusion": "Conclusion: Strict caps on visitor numbers are imperative because environmental harm is often irreversible."
+    },
+    "key_vocabulary": ["eco-tourism", "fragile ecosystem", "biodiversity loss", "indigenous population", "environmental carrying capacity"]
+  },
+  {
+    "id": "wt2_09",
+    "essay_type": "causes_solutions",
+    "topic": "Youth & Employment",
+    "prompt": "In several nations, large numbers of young graduates struggle to secure employment matching their educational qualifications. What are the factors causing this phenomenon, and what solutions can be offered?",
+    "model_outline": {
+      "introduction": "Paraphrase graduate underemployment + Outline dual causes (curriculum mismatch, degree inflation) and remediation.",
+      "body_1": "Causes: Oversupply of graduates in saturated humanities fields, university curricula lagging behind technical market realities.",
+      "body_2": "Solutions: University-industry apprenticeship partnerships, government subsidies for high-demand STEM sectors.",
+      "conclusion": "Final thought: Aligning higher education with macroeconomic demands is essential for youth prosperity."
+    },
+    "key_vocabulary": ["underemployment", "degree inflation", "curriculum alignment", "vocational internship", "macroeconomic demand"]
+  },
+  {
+    "id": "wt2_10",
+    "essay_type": "agree_disagree",
+    "topic": "Science & Animal Welfare",
+    "prompt": "It is completely unacceptable to use animals for scientific and medical experimentation in the modern era. To what extent do you agree or disagree?",
+    "model_outline": {
+      "introduction": "Paraphrase animal testing ethics + State nuanced thesis (Partially agree: cosmetic testing is reprehensible, but essential medical breakthroughs still necessitate tightly regulated animal research).",
+      "body_1": "Opposition: Animal suffering, moral rights of sentient beings, availability of computer modeling and organoid cultures.",
+      "body_2": "Necessity: Complex systemic physiological reactions cannot yet be fully simulated in vitro; cancer and vaccine trials rely on animal models.",
+      "conclusion": "Conclusion: Strict adherence to the 3Rs (Replace, Reduce, Refine) while vigorously pursuing synthetic alternatives."
+    },
+    "key_vocabulary": ["sentient beings", "in vitro", "physiological response", "ethical stewardship", "clinical trials"]
+  }
+]

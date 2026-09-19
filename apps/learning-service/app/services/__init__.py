@@ -2,6 +2,11 @@
 
 from app.services.error_aggregator import AggregatedErrorGroup, ErrorAggregationService
 from app.services.priority_calculator import PriorityBreakdown, PriorityCalculator
+from app.services.speech_metrics import (
+    SpeechAcousticMetrics,
+    SpeechMetricsAnalyzer,
+    TimestampSegment,
+)
 from app.services.trend_calculator import TrendAnalysis, TrendCalculator
 from app.services.weakness_service import WeaknessLifecycleService, WeaknessTransitionDecision
 
@@ -10,6 +15,9 @@ __all__ = [
     "ErrorAggregationService",
     "PriorityBreakdown",
     "PriorityCalculator",
+    "SpeechAcousticMetrics",
+    "SpeechMetricsAnalyzer",
+    "TimestampSegment",
     "TrendAnalysis",
     "TrendCalculator",
     "WeaknessLifecycleService",

@@ -1,0 +1,92 @@
+[
+  {
+    "id": "gram_01",
+    "pattern_name": "Complex Subordination (Concession & Contrast)",
+    "band_target": 7.0,
+    "structural_formula": "While / Whereas / Although + Clause 1, Clause 2",
+    "pedagogical_purpose": "Demonstrates grammatical complexity and nuanced counter-arguments in Task 2 and Speaking Part 3.",
+    "ielts_example": "Although renewable energy requires substantial capital expenditure initially, it guarantees long-term environmental sustainability.",
+    "common_learner_pitfall": "Redundant 'but' after although (e.g., 'Although X, but Y' is incorrect)."
+  },
+  {
+    "id": "gram_02",
+    "pattern_name": "Conditionals (Type 2 & Type 3 Hypotheses)",
+    "band_target": 7.5,
+    "structural_formula": "If + Subject + had + Past Participle, Subject + would have + Past Participle",
+    "pedagogical_purpose": "Hypothesising about past policies or alternative societal outcomes.",
+    "ielts_example": "If governments had enacted stringent carbon taxes a decade ago, global emissions would have fallen noticeably.",
+    "common_learner_pitfall": "Using 'would have' inside the 'if' clause instead of the main clause."
+  },
+  {
+    "id": "gram_03",
+    "pattern_name": "Impersonal Passive for Objective Stance",
+    "band_target": 7.0,
+    "structural_formula": "It is widely argued / believed / acknowledged that + Subject + Verb",
+    "pedagogical_purpose": "Achieves academic register and objective detachment in Task 2 essays.",
+    "ielts_example": "It is widely acknowledged that early childhood education exerts a formative influence on adolescent behavior.",
+    "common_learner_pitfall": "Overusing active first-person pronouns ('I think that...') instead of objective impersonal structures."
+  },
+  {
+    "id": "gram_04",
+    "pattern_name": "Non-Defining Relative Clauses",
+    "band_target": 7.0,
+    "structural_formula": "Noun Phrase, which / who + Verb..., Verb...",
+    "pedagogical_purpose": "Adds descriptive or evaluative commentary smoothly without fragmenting sentences.",
+    "ielts_example": "Urban gridlock, which has escalated due to rapid population growth, exacts severe economic costs.",
+    "common_learner_pitfall": "Omitting enclosing commas or using 'that' in non-defining clauses."
+  },
+  {
+    "id": "gram_05",
+    "pattern_name": "Participial Clauses (Present & Past Participles)",
+    "band_target": 8.0,
+    "structural_formula": "Verb-ing / Past Participle Phrase, Main Clause",
+    "pedagogical_purpose": "Condenses background information and showcases advanced syntactic flexibility.",
+    "ielts_example": "Recognizing the urgency of the climate crisis, many European municipalities have banned diesel vehicles from central districts.",
+    "common_learner_pitfall": "Dangling participle where the subject of the participle does not match the subject of the main clause."
+  },
+  {
+    "id": "gram_06",
+    "pattern_name": "Academic Hedging (Cautious Language)",
+    "band_target": 7.5,
+    "structural_formula": "Modal (may/might/could) + Adverb (substantially/tend to) + Verb",
+    "pedagogical_purpose": "Avoids dogmatic over-generalizations in IELTS Writing Task 2 conclusions.",
+    "ielts_example": "Remote working arrangements appear to enhance employee productivity, though they may occasionally impede spontaneous collaboration.",
+    "common_learner_pitfall": "Making absolute statements ('This will always solve the problem' instead of 'This tends to alleviate...')."
+  },
+  {
+    "id": "gram_07",
+    "pattern_name": "Cleft Sentences for Focus & Emphasis",
+    "band_target": 8.0,
+    "structural_formula": "What + Clause + is / was + Focus OR It is / was + Focus + that / who + Clause",
+    "pedagogical_purpose": "Creates dynamic sentence variety and highlights primary causative factors.",
+    "ielts_example": "What distinguishes successful economies is their sustained investment in vocational apprenticeship programmes.",
+    "common_learner_pitfall": "Agreement errors with plural focus items (e.g., 'What is needed are policies' vs 'What is needed is...')."
+  },
+  {
+    "id": "gram_08",
+    "pattern_name": "Nominalisation (Transforming Verbs to Academic Nouns)",
+    "band_target": 7.5,
+    "structural_formula": "The + Noun + of + Noun Phrase (e.g., 'destroy forests' -> 'the destruction of forests')",
+    "pedagogical_purpose": "Increases lexical density and elevates academic tone in Task 1 and Task 2.",
+    "ielts_example": "The proliferation of digital technologies has catalyzed the transformation of contemporary education.",
+    "common_learner_pitfall": "Over-nominalizing to the point of creating opaque, unreadable prose."
+  },
+  {
+    "id": "gram_09",
+    "pattern_name": "Negative Inversion for Rhetorical Force",
+    "band_target": 8.5,
+    "structural_formula": "Not only + Auxiliary + Subject + Verb, but Subject + also + Verb",
+    "pedagogical_purpose": "Provides stylistic sophistication and powerful rhetorical balance in argumentative essays.",
+    "ielts_example": "Not only does physical exercise combat adolescent obesity, but it also improves academic focus in classroom settings.",
+    "common_learner_pitfall": "Forgetting subject-auxiliary inversion after the initial negative adverbial ('Not only physical exercise combats' is incorrect)."
+  },
+  {
+    "id": "gram_10",
+    "pattern_name": "Concessive Prepositional Phrases",
+    "band_target": 7.0,
+    "structural_formula": "Despite / In spite of + Noun Phrase / Gerund, Main Clause",
+    "pedagogical_purpose": "Introduces counter-arguments cleanly within compact sentences.",
+    "ielts_example": "Despite facing formidable fiscal constraints, developing nations have made substantial progress in primary school enrollment.",
+    "common_learner_pitfall": "Using 'despite of' or placing a full clause directly after despite without 'the fact that'."
+  }
+]

@@ -1,0 +1,202 @@
+[
+  {
+    "canonical_form": "substantial",
+    "part_of_speech": "adjective",
+    "awl_sublist": 5,
+    "meaning": "Of considerable importance, size, or worth.",
+    "collocations": ["substantial increase", "substantial proportion", "substantial investment", "substantial impact"],
+    "family_forms": ["substantially (adv)", "substantiate (v)", "substance (n)"],
+    "ielts_example_writing": "Between 1990 and 2010, the country experienced a substantial increase in renewable energy production.",
+    "ielts_example_speaking": "There has been a substantial shift in how younger people consume daily news."
+  },
+  {
+    "canonical_form": "fluctuate",
+    "part_of_speech": "verb",
+    "awl_sublist": 8,
+    "meaning": "Rise and fall irregularly in number, amount, or intensity.",
+    "collocations": ["fluctuate wildly", "fluctuate between X and Y", "fluctuating trend", "tendency to fluctuate"],
+    "family_forms": ["fluctuation (n)", "fluctuating (adj)"],
+    "ielts_example_writing": "Car sales fluctuated between 30,000 and 45,000 units throughout the subsequent decade.",
+    "ielts_example_speaking": "My motivation tends to fluctuate depending on how demanding my university schedule is."
+  },
+  {
+    "canonical_form": "prevalent",
+    "part_of_speech": "adjective",
+    "awl_sublist": 7,
+    "meaning": "Widespread in a particular area or at a particular time.",
+    "collocations": ["increasingly prevalent", "prevalent attitude", "widely prevalent", "prevalent condition"],
+    "family_forms": ["prevalence (n)", "prevail (v)"],
+    "ielts_example_writing": "Sedentary lifestyles have become increasingly prevalent in urbanized societies.",
+    "ielts_example_speaking": "Fast food is extremely prevalent in metropolitan centers because people prioritize convenience."
+  },
+  {
+    "canonical_form": "mitigate",
+    "part_of_speech": "verb",
+    "awl_sublist": 9,
+    "meaning": "Make something bad less severe, serious, or painful.",
+    "collocations": ["mitigate the impact", "mitigate risks", "mitigate climate change", "measures to mitigate"],
+    "family_forms": ["mitigation (n)", "mitigating (adj)", "unmitigated (adj)"],
+    "ielts_example_writing": "Governments must enact strict emissions caps to mitigate the catastrophic effects of global warming.",
+    "ielts_example_speaking": "Practicing deep breathing can help mitigate performance anxiety during formal presentations."
+  },
+  {
+    "canonical_form": "unprecedented",
+    "part_of_speech": "adjective",
+    "awl_sublist": 3,
+    "meaning": "Never done or known before.",
+    "collocations": ["unprecedented scale", "unprecedented rate", "unprecedented growth", "at an unprecedented level"],
+    "family_forms": ["precedent (n)", "precedented (adj)"],
+    "ielts_example_writing": "The rapid advancement of artificial intelligence represents technological disruption on an unprecedented scale.",
+    "ielts_example_speaking": "The volume of tourists visiting our historic district reached unprecedented heights last summer."
+  },
+  {
+    "canonical_form": "allocate",
+    "part_of_speech": "verb",
+    "awl_sublist": 6,
+    "meaning": "Distribute resources or duties for a particular purpose.",
+    "collocations": ["allocate resources", "allocate funding", "allocate time", "equitably allocated"],
+    "family_forms": ["allocation (n)", "reallocate (v)"],
+    "ielts_example_writing": "Municipal authorities should allocate greater financial resources to subsidizing public transportation.",
+    "ielts_example_speaking": "It is essential to allocate dedicated time each morning for concentrated language review."
+  },
+  {
+    "canonical_form": "deteriorate",
+    "part_of_speech": "verb",
+    "awl_sublist": 8,
+    "meaning": "Become progressively worse.",
+    "collocations": ["rapidly deteriorate", "condition deteriorated", "deteriorating health", "environmental deterioration"],
+    "family_forms": ["deterioration (n)"],
+    "ielts_example_writing": "Without prompt government intervention, urban air quality will continue to deteriorate exponentially.",
+    "ielts_example_speaking": "Traffic conditions in my hometown have deteriorated noticeably over the past five years."
+  },
+  {
+    "canonical_form": "imperative",
+    "part_of_speech": "adjective",
+    "awl_sublist": 8,
+    "meaning": "Of vital importance; crucial.",
+    "collocations": ["morally imperative", "imperative to ensure", "economic imperative", "absolute imperative"],
+    "family_forms": ["imperatively (adv)", "imperative (n)"],
+    "ielts_example_writing": "It is imperative that secondary schools integrate digital literacy into core national curricula.",
+    "ielts_example_speaking": "I believe learning to manage personal finances is an imperative life skill for young adults."
+  },
+  {
+    "canonical_form": "disparity",
+    "part_of_speech": "noun",
+    "awl_sublist": 7,
+    "meaning": "A great difference or inequality.",
+    "collocations": ["economic disparity", "growing disparity", "income disparity", "disparity between rich and poor"],
+    "family_forms": ["disparate (adj)"],
+    "ielts_example_writing": "The widening wealth disparity poses a grave threat to social cohesion across many developing nations.",
+    "ielts_example_speaking": "There is a noticeable disparity between the educational facilities in major cities and remote villages."
+  },
+  {
+    "canonical_form": "indispensable",
+    "part_of_speech": "adjective",
+    "awl_sublist": 7,
+    "meaning": "Absolutely necessary.",
+    "collocations": ["indispensable tool", "prove indispensable", "indispensable role", "indispensable to success"],
+    "family_forms": ["dispensable (adj)", "dispense (v)"],
+    "ielts_example_writing": "Critical thinking skills are indispensable for graduates entering an increasingly automated workforce.",
+    "ielts_example_speaking": "My smartphone has become practically indispensable for navigating public transit and scheduling appointments."
+  },
+  {
+    "canonical_form": "proliferation",
+    "part_of_speech": "noun",
+    "awl_sublist": 9,
+    "meaning": "Rapid increase in the number or amount of something.",
+    "collocations": ["rapid proliferation", "proliferation of devices", "proliferation of information", "nuclear proliferation"],
+    "family_forms": ["proliferate (v)", "prolific (adj)"],
+    "ielts_example_writing": "The uncontrolled proliferation of single-use plastics has precipitated an ecological crisis in marine habitats.",
+    "ielts_example_speaking": "The recent proliferation of electric scooters in our streets has caused debate about pedestrian safety."
+  },
+  {
+    "canonical_form": "detrimental",
+    "part_of_speech": "adjective",
+    "awl_sublist": 8,
+    "meaning": "Tending to cause harm.",
+    "collocations": ["detrimental effect", "detrimental to health", "highly detrimental", "detrimental impact"],
+    "family_forms": ["detriment (n)", "detrimentally (adv)"],
+    "ielts_example_writing": "Excessive screen exposure before sleep exerts a profoundly detrimental effect on adolescent cognitive function.",
+    "ielts_example_speaking": "Skipping breakfast on exam days can be remarkably detrimental to your concentration."
+  },
+  {
+    "canonical_form": "ubiquitous",
+    "part_of_speech": "adjective",
+    "awl_sublist": 9,
+    "meaning": "Present, appearing, or found everywhere.",
+    "collocations": ["become ubiquitous", "ubiquitous presence", "almost ubiquitous", "ubiquitous feature"],
+    "family_forms": ["ubiquity (n)", "ubiquitously (adv)"],
+    "ielts_example_writing": "High-speed wireless connectivity has transformed from a luxury into a ubiquitous utility.",
+    "ielts_example_speaking": "Social media applications are now so ubiquitous that avoiding them requires deliberate effort."
+  },
+  {
+    "canonical_form": "exacerbate",
+    "part_of_speech": "verb",
+    "awl_sublist": 9,
+    "meaning": "Make a problem, bad situation, or negative feeling worse.",
+    "collocations": ["exacerbate the problem", "exacerbate existing inequalities", "exacerbate tensions", "serve to exacerbate"],
+    "family_forms": ["exacerbation (n)"],
+    "ielts_example_writing": "Austerity measures frequently exacerbate unemployment rates during economic recessions.",
+    "ielts_example_speaking": "Working late hours only serves to exacerbate chronic fatigue and anxiety."
+  },
+  {
+    "canonical_form": "counterpart",
+    "part_of_speech": "noun",
+    "awl_sublist": 8,
+    "meaning": "A person or thing holding a corresponding position or function in a different place or organization.",
+    "collocations": ["foreign counterparts", "male/female counterparts", "international counterpart", "commercial counterpart"],
+    "family_forms": [],
+    "ielts_example_writing": "Female graduates earned slightly less on average than their male counterparts in technical sectors.",
+    "ielts_example_speaking": "Our local students frequently collaborate online with their counterparts at European universities."
+  },
+  {
+    "canonical_form": "paramount",
+    "part_of_speech": "adjective",
+    "awl_sublist": 9,
+    "meaning": "More important than anything else; supreme.",
+    "collocations": ["paramount importance", "of paramount concern", "paramount objective", "paramount duty"],
+    "family_forms": [],
+    "ielts_example_writing": "Ensuring equitable access to clean drinking water should be considered of paramount importance by governments.",
+    "ielts_example_speaking": "Maintaining mental well-being is of paramount importance during intensive exam preparation periods."
+  },
+  {
+    "canonical_form": "subsequent",
+    "part_of_speech": "adjective",
+    "awl_sublist": 2,
+    "meaning": "Coming after something in time; following.",
+    "collocations": ["subsequent years", "subsequent to", "in subsequent generations", "subsequent analysis"],
+    "family_forms": ["subsequently (adv)"],
+    "ielts_example_writing": "The policy was enacted in 1995, and in subsequent years, crime rates fell by nearly 20 percent.",
+    "ielts_example_speaking": "I struggled in my initial mock test, but subsequent attempts showed steady improvement."
+  },
+  {
+    "canonical_form": "diminish",
+    "part_of_speech": "verb",
+    "awl_sublist": 2,
+    "meaning": "Make or become less.",
+    "collocations": ["diminishing returns", "diminish rapidly", "diminish the importance", "markedly diminished"],
+    "family_forms": ["diminution (n)", "undiminished (adj)"],
+    "ielts_example_writing": "Agricultural productivity will diminish sharply if desertification continues unchecked.",
+    "ielts_example_speaking": "The enjoyment of watching movies on mobile phones is greatly diminished compared to cinema screens."
+  },
+  {
+    "canonical_form": "facilitate",
+    "part_of_speech": "verb",
+    "awl_sublist": 5,
+    "meaning": "Make an action or process easy or easier.",
+    "collocations": ["facilitate learning", "facilitate communication", "facilitate trade", "designed to facilitate"],
+    "family_forms": ["facilitation (n)", "facilitator (n)"],
+    "ielts_example_writing": "Digital portals facilitate communication between healthcare providers and rural patients.",
+    "ielts_example_speaking": "A calm, organized study environment helps facilitate deep concentration."
+  },
+  {
+    "canonical_form": "inherent",
+    "part_of_speech": "adjective",
+    "awl_sublist": 9,
+    "meaning": "Existing in something as a permanent, essential, or characteristic attribute.",
+    "collocations": ["inherent risk", "inherent flaw", "inherent dignity", "inherently dangerous"],
+    "family_forms": ["inherently (adv)"],
+    "ielts_example_writing": "There are inherent risks associated with relying solely on automated algorithmic decision-making in legal systems.",
+    "ielts_example_speaking": "Learning a second language involves an inherent willingness to make mistakes and learn from feedback."
+  }
+]

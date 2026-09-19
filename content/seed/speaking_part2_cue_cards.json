@@ -1,0 +1,162 @@
+[
+  {
+    "id": "sp2_01",
+    "topic_category": "Person",
+    "title": "Describe a person who has strongly influenced your life.",
+    "bullet_points": [
+      "Who this person is and how you know them",
+      "What kind of person they are",
+      "What specific things they have done or taught you",
+      "Explain why their influence has been so significant to you"
+    ],
+    "part3_follow_up_questions": [
+      "What types of people typically have the greatest influence on young children?",
+      "Do you think public figures and celebrities have a moral responsibility to be good role models?",
+      "How has social media changed the way people are influenced compared to the past?"
+    ]
+  },
+  {
+    "id": "sp2_02",
+    "topic_category": "Place",
+    "title": "Describe a quiet place that you like to visit.",
+    "bullet_points": [
+      "Where this place is located",
+      "How often you go there",
+      "What you usually do when you are there",
+      "Explain why you find this place particularly peaceful"
+    ],
+    "part3_follow_up_questions": [
+      "Why is it becoming increasingly difficult to find quiet spaces in modern urban environments?",
+      "What are the psychological effects of prolonged exposure to noise pollution?",
+      "Should municipal governments invest more funds in creating urban parks and green spaces?"
+    ]
+  },
+  {
+    "id": "sp2_03",
+    "topic_category": "Object",
+    "title": "Describe a piece of electronic equipment that you find indispensable.",
+    "bullet_points": [
+      "What the item is and when you acquired it",
+      "How often you use it in your daily life",
+      "What specific features or functions you rely on most",
+      "Explain how your routine would be impacted without it"
+    ],
+    "part3_follow_up_questions": [
+      "Has society become overly dependent on digital devices for basic daily functions?",
+      "What challenges do older generations face when adapting to rapidly evolving consumer electronics?",
+      "Do you think smart devices improve human productivity or simply create new distractions?"
+    ]
+  },
+  {
+    "id": "sp2_04",
+    "topic_category": "Event",
+    "title": "Describe an important traditional festival or celebration in your culture.",
+    "bullet_points": [
+      "What the celebration is and when it takes place",
+      "What preparations people make in advance",
+      "What activities, rituals, or foods are associated with it",
+      "Explain why this festival holds enduring cultural significance"
+    ],
+    "part3_follow_up_questions": [
+      "Are traditional celebrations losing their original meaning due to commercialisation?",
+      "How do national celebrations help foster a cohesive sense of cultural identity?",
+      "Is it important for schools to teach children about traditions from other global cultures?"
+    ]
+  },
+  {
+    "id": "sp2_05",
+    "topic_category": "Experience",
+    "title": "Describe a difficult decision that you had to make.",
+    "bullet_points": [
+      "What the decision was and when you faced it",
+      "What different options or choices were available to you",
+      "What factors made the decision particularly challenging",
+      "Explain whether you believe you made the right choice in retrospect"
+    ],
+    "part3_follow_up_questions": [
+      "What qualities distinguish effective decision-makers in leadership positions?",
+      "Should young adults rely more on parental guidance or their own intuition when choosing a career?",
+      "How does fear of failure impede people from taking decisive action in life?"
+    ]
+  },
+  {
+    "id": "sp2_06",
+    "topic_category": "Person",
+    "title": "Describe a creative artist, writer, or musician that you admire.",
+    "bullet_points": [
+      "Who they are and what field of art they work in",
+      "How you first became familiar with their work",
+      "What unique characteristics distinguish their creations",
+      "Explain why their creative work inspires or resonates with you"
+    ],
+    "part3_follow_up_questions": [
+      "Do you think government subsidies are necessary to sustain the fine arts?",
+      "How has digital media impacted the financial viability of independent artists?",
+      "Should art education be given equal priority to STEM subjects in secondary schools?"
+    ]
+  },
+  {
+    "id": "sp2_07",
+    "topic_category": "Place",
+    "title": "Describe a city or foreign destination that you would love to explore in the future.",
+    "bullet_points": [
+      "Where this destination is located",
+      "What you know about its culture, architecture, or environment",
+      "What specific sights or activities you want to experience there",
+      "Explain why visiting this destination holds special appeal for you"
+    ],
+    "part3_follow_up_questions": [
+      "How does international travel broaden an individual's worldview and tolerance?",
+      "What can tourist destinations do to mitigate the negative impacts of over-tourism?",
+      "Do virtual reality tours offer a credible alternative to physical travel?"
+    ]
+  },
+  {
+    "id": "sp2_08",
+    "topic_category": "Object",
+    "title": "Describe a book or piece of literature that left a lasting impression on you.",
+    "bullet_points": [
+      "What the title and genre of the book is",
+      "Who the author is and when you read it",
+      "What central theme or plot line captivated you",
+      "Explain why this book continues to influence your thinking"
+    ],
+    "part3_follow_up_questions": [
+      "Why are reading habits declining among adolescents in the smartphone era?",
+      "Does reading fiction improve empathy and social intelligence more than non-fiction?",
+      "Will digital audiobooks and e-readers eventually render traditional paper books obsolete?"
+    ]
+  },
+  {
+    "id": "sp2_09",
+    "topic_category": "Event",
+    "title": "Describe a public sporting event or competition that you attended or watched.",
+    "bullet_points": [
+      "What event it was and where it occurred",
+      "Who was competing and what was at stake",
+      "What the atmosphere was like during the event",
+      "Explain why this particular event was memorable for you"
+    ],
+    "part3_follow_up_questions": [
+      "Do major international sporting events like the Olympics bring economic value to host cities?",
+      "Why do competitive sports provoke such intense emotional tribalism among fans?",
+      "Should governments allocate more funds to grassroots sports rather than elite athletes?"
+    ]
+  },
+  {
+    "id": "sp2_10",
+    "topic_category": "Experience",
+    "title": "Describe a time when you helped someone or volunteered in your community.",
+    "bullet_points": [
+      "Who you helped and what circumstances led to it",
+      "What specific assistance or service you provided",
+      "What challenges you encountered during the process",
+      "Explain how you felt after completing the experience"
+    ],
+    "part3_follow_up_questions": [
+      "What motivates individuals to dedicate unpaid time to community volunteering?",
+      "Can altruistic behavior be actively nurtured through school educational programmes?",
+      "Do non-governmental charities manage social crises more effectively than state bureaucracies?"
+    ]
+  }
+]

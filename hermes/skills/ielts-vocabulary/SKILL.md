@@ -1,37 +1,26 @@
 ---
 name: ielts-vocabulary
-version: 0.1.0
-description: IELTS vocabulary learning and spaced repetition. Extracts high-value items from learner output, manages FSRS-based review scheduling, and tracks two-dimensional mastery (recognition vs production).
-tags: [ielts, vocabulary, fsrs, review]
+version: 1.0.0
+description: Active recall, collocations, and FSRS spaced repetition for high-yield IELTS vocabulary.
+tags: [ielts, vocabulary, fsrs, collocations, review]
 dependencies: [ielts-core]
 ---
 
-# IELTS Vocabulary
+# IELTS Vocabulary & Spaced Repetition Skill
 
-## When to Use
-- During scheduled vocabulary review sessions
-- When extracting vocabulary from learner essays/speech
-- When the learner explicitly requests vocabulary work
+## 1. When to Use
+Activate when:
+- Daily review routine triggers via Cron or user request.
+- Extracting new vocabulary from errors or high-value academic essays.
+- Conducting active recall vocabulary drills.
 
-## Item Extraction Rules
-An item becomes review-worthy ONLY if:
-- Repeated relevance across multiple contexts
-- Learner error (misuse, wrong form, wrong collocation)
-- High task value (academic word list, topic-specific)
-- Explicit learner request
-
-Do NOT automatically add every word encountered.
-
-## Two-Dimensional Mastery
-Track separately:
-- **Recognition**: Can identify meaning in context
-- **Production**: Can use correctly in own writing/speech
-- **Contextual use**: Can deploy appropriately for IELTS tasks
-
-## FSRS Integration
-- Rating: Again (1) / Hard (2) / Good (3) / Easy (4)
-- Desired retention: 0.9 (configurable)
-- Review types: recognition quiz, production prompt, contextual usage
-
-## Implementation Status
-⚠️ Stub — Full implementation in Phase 9
+## 2. Core Workflow
+1. **Fetch Due Items:**
+   - Call MCP tool `get_due_reviews(learner_id=id, limit=10)`.
+2. **Present Card:**
+   - Format each review item using `templates/review_card.md` and `references/academic_word_list.md`.
+3. **Record Performance:**
+   - On student answer, evaluate accuracy and call `submit_review(learning_item_id=id, rating=1..4)`.
+   - Ratings: 1 (Again), 2 (Hard), 3 (Good), 4 (Easy).
+4. **Create New Learning Items:**
+   - When remediating a lexical error, call `create_learning_item(canonical_form=word, meaning=def)`.
