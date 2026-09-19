@@ -14,6 +14,7 @@ from app.models.learning_item import (
     ReviewRating,
     ReviewType,
 )
+from app.models.question_bank import QuestionModel, QuestionSetModel
 from app.models.task import (
     CompletionStatus,
     PracticeSession,
@@ -43,6 +44,8 @@ __all__ = [
     "LearningItem",
     "MasteryState",
     "PracticeSession",
+    "QuestionModel",
+    "QuestionSetModel",
     "Recommendation",
     "RecommendationStatus",
     "RecommendationType",

@@ -35,6 +35,7 @@ def test_content_models_instantiation() -> None:
     assert item.skill == Skill.WRITING
     assert len(item.chunks) == 1
     assert item.chunks[0].chunk_index == 0
+    assert item.chunks[0].embedding is not None
     assert len(item.chunks[0].embedding) == 768
 
 
