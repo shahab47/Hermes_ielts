@@ -1,0 +1,70 @@
+version: "3.9"
+
+# IELTS Personal Learning Agent — Docker Compose Architecture
+# Future services:
+# 1. postgres: PostgreSQL 18 with pgvector 0.8.x as authoritative learner database
+# 2. learning-service: FastAPI backend providing domain logic and MCP server
+# 3. honcho: Honcho v3.0.6 service providing cross-session user modeling and Theory-of-Mind
+# 4. caddy: Reverse proxy with automated TLS for public API / Telegram webhook endpoints (if used)
+
+services:
+  # ---------------------------------------------------------------------------
+  # Authoritative Learner Database (PostgreSQL 18 + pgvector 0.8.x)
+  # ---------------------------------------------------------------------------
+  # postgres:
+  #   image: pgvector/pgvector:pg18  # or postgres:18 with pgvector extension built
+  #   container_name: ielts-postgres
+  #   restart: unless-stopped
+  #   environment:
+  #     POSTGRES_DB: ielts_learning
+  #     POSTGRES_USER: ${POSTGRES_USER:-ielts_user}
+  #     POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-change_me_in_production}
+  #   ports:
+  #     - "127.0.0.1:5432:5432"
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data
+  #     - ./infra/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+  #   healthcheck:
+  #     test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-ielts_user} -d ielts_learning"]
+  #     interval: 10s
+  #     timeout: 5s
+  #     retries: 5
+
+  # ---------------------------------------------------------------------------
+  # Honcho Service (Cross-session user modeling and Theory-of-Mind)
+  # ---------------------------------------------------------------------------
+  # honcho:
+  #   image: plasticlabs/honcho:v3.0.6
+  #   container_name: ielts-honcho
+  #   restart: unless-stopped
+  #   environment:
+  #     HONCHO_PORT: 8000
+  #     HONCHO_API_KEY: ${HONCHO_API_KEY:-dev_key}
+  #   ports:
+  #     - "127.0.0.1:8001:8000"
+  #   volumes:
+  #     - honcho_data:/data
+
+  # ---------------------------------------------------------------------------
+  # Learning Service (Domain Logic & MCP Server)
+  # ---------------------------------------------------------------------------
+  # learning-service:
+  #   build:
+  #     context: .
+  #     dockerfile: infra/docker/Dockerfile.learning-service
+  #   container_name: ielts-learning-service
+  #   restart: unless-stopped
+  #   environment:
+  #     DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-ielts_user}:${POSTGRES_PASSWORD:-change_me_in_production}@postgres:5432/ielts_learning
+  #     HONCHO_BASE_URL: http://honcho:8000
+  #     HONCHO_API_KEY: ${HONCHO_API_KEY:-dev_key}
+  #     ENVIRONMENT: ${ENVIRONMENT:-development}
+  #   ports:
+  #     - "127.0.0.1:8080:8080"
+  #   depends_on:
+  #     postgres:
+  #       condition: service_healthy
+
+# volumes:
+#   postgres_data:
+#   honcho_data:

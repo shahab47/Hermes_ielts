@@ -1,0 +1,23 @@
+model:
+  default: "anthropic/claude-opus-4.6"  # Configurable - choose based on evaluator benchmark
+  provider: "openrouter"
+memory:
+  provider: "honcho"
+  memory_enabled: true
+  user_profile_enabled: true
+messaging:
+  telegram:
+    allowed_users: []  # Add your Telegram user ID
+tts:
+  provider: "edge"
+  voice: "en-GB-SoniaNeural"  # Clear UK English
+stt:
+  provider: "faster-whisper"
+  model: "small"  # Use 'medium' or 'large-v3' on stronger hardware
+  language: "en"
+cron:
+  allow_agent_scheduling: false  # Keep fixed routines initially
+mcp_servers:
+  ielts-learning:
+    command: "uvx"
+    args: ["ielts-learning-mcp"]
