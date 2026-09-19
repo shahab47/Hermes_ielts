@@ -1,28 +1,32 @@
-# Hermes Agent v0.21.3 Compatibility Verification Report
+# Hermes Agent Compatibility & Integration Verification Report
 **Project:** IELTS Personal Learning Agent (`ielts-hermes`)  
 **Document ID:** `DOC-P0-HERMES-COMPAT`  
-**Version:** 1.0.0  
+**Version:** 2.0.0  
 **Date:** 2026-09-19  
-**Status:** VERIFIED & LOCKED  
+**Status:** VERIFIED & LOCKED (SPEC V2)  
 **Baseline Runtime:** Python 3.13 on Ubuntu 24.04 LTS (Production) / Windows 11 (Development)  
-**Target Package:** `hermes-agent` v0.21.3 (Git Tag: `v2026.9.14`, Released: September 14, 2026)  
-**Repository:** [https://github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)
+**Installed Target Package:** `hermes-agent` v0.21.0 (2026.8.31 · upstream `c661785f` · local `52e5aa64`)  
+**Binary Location:** `C:\Users\shkh\AppData\Local\hermes\bin\hermes.exe`  
+**Internal Python Runtime:** Python 3.11.15  
+**Upstream Repository:** [https://github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)
 
 ---
 
 ## 1. Executive Summary
 
-This report establishes formal architectural compatibility verification between the **IELTS Personal Learning Agent (`ielts-hermes`)** and **NousResearch Hermes Agent v0.21.3**.
+This report establishes formal architectural compatibility verification between the **IELTS Personal Learning Agent (`ielts-hermes`)** and **NousResearch Hermes Agent v0.21.0 (with forward compatibility for v0.21.3)**.
+
+Per Spec v2 Section 3, the locked installed version `v0.21.0` is treated as the ground truth. Direct execution of the Hermes CLI (`hermes --version`, `hermes --help`, `hermes mcp`, `hermes profile`, `hermes memory`, `hermes gateway`, `hermes cron`) confirms that all required integration surfaces are fully present in the local installation.
 
 The primary architectural mandate defined in the project specification is the **Zero-Fork Policy**: Hermes Agent must be utilized strictly as an upstream framework without source-code modifications, relying exclusively on supported extension points:
 1. Native Gateway Configuration (Telegram)
 2. Isolated Execution Profiles (`~/.hermes/profiles/ielts-tutor/`)
-3. Domain Skills System (`~/.hermes/skills/ielts/`)
+3. Domain Skills System (`~/.hermes/skills/ielts/` and profile skills)
 4. Model Context Protocol (MCP) tool integration
 5. Pluggable Memory Providers (Honcho integration + built-in SOUL/USER/MEMORY)
 6. Autonomous prompt-as-cron scheduling
 
-### Verification Verdict: FULLY COMPATIBLE
+### Verification Verdict: FULLY COMPATIBLE (INSTALLED v0.21.0 LOCKED)
 
 All functional requirements for the IELTS Personal Learning Agent are natively supported by Hermes v0.21.3 without architectural workarounds or custom forks:
 - **Python 3.13 Support:** Verified. The package constraint `requires-python = ">=3.11,<3.14"` satisfies our Python 3.13 baseline.
@@ -69,15 +73,16 @@ graph TD
 
 ## 2. Upstream Baseline Specification
 
-| Attribute | Upstream Specification | Project Baseline | Compatibility Status |
+| Attribute | Upstream Specification | Installed Baseline | Compatibility Status |
 | :--- | :--- | :--- | :--- |
 | **Package Name** | `hermes-agent` | `hermes-agent` | **Verified Match** |
-| **Target Version** | `v0.21.3` | `0.21.3` | **Locked** |
-| **Git Tag** | `v2026.9.14` | `v2026.9.14` | **Pinned** |
-| **Release Date** | September 14, 2026 | September 2026 baseline | **Current** |
-| **Python Requirement** | `>=3.11, <3.14` | `Python 3.13.x` | **Compliant** |
+| **Installed Version** | `v0.21.0` (2026.8.31) | `v0.21.0` (`c661785f`) | **Locked & Verified Ground Truth** |
+| **Forward Ref Version** | `v0.21.3` (2026.9.14) | Upstream branch | **Forward Compatible** |
+| **Install Method** | Git / Local binary | `C:\Users\shkh\AppData\Local\hermes\bin\hermes.exe` | **Verified** |
+| **Hermes Python Runtime** | `>=3.11, <3.14` | `Python 3.11.15` (internal) | **Verified** |
+| **Backend Python Runtime** | `>=3.11, <3.14` | `Python 3.13.5` (`apps/learning-service`) | **Compliant & Pinned** |
 | **Package Extras** | `hermes-agent[voice]` | `hermes-agent[voice]` | **Verified** |
-| **System Dependencies** | `ffmpeg`, `portaudio19-dev` | Installed via Docker / Host | **Compatible** |
+| **System Dependencies** | `ffmpeg`, `portaudio19-dev` | Installed via Host / Docker | **Compatible** |
 | **Config Location** | `~/.hermes/config.yaml` or `~/.hermes/profiles/<name>/` | `~/.hermes/profiles/ielts-tutor/` | **Compliant** |
 | **State Storage** | SQLite (`~/.hermes/state.db`) | Local to Hermes profile | **Isolated from PG** |
 
