@@ -1,0 +1,32 @@
+# Caddy reverse proxy configuration for IELTS Learning Assistant
+# Replace {$DOMAIN:api.yourdomain.com} with your actual domain
+
+{$DOMAIN:api.yourdomain.com} {
+    # Automatic TLS with Let's Encrypt / ZeroSSL
+    tls {$ACME_EMAIL:admin@yourdomain.com}
+
+    # Security Headers
+    header {
+        Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+        X-Content-Type-Options "nosniff"
+        X-Frame-Options "DENY"
+        Referrer-Policy "strict-origin-when-cross-origin"
+        -Server
+    }
+
+    # API / Health check reverse proxy
+    reverse_proxy 127.0.0.1:8000 {
+        header_up Host {host}
+        header_up X-Real-IP {remote_host}
+        header_up X-Forwarded-For {remote_host}
+        header_up X-Forwarded-Proto {scheme}
+    }
+
+    # Logging
+    log {
+        output file /var/log/caddy/access.log {
+            roll_size 50mb
+            roll_keep 5
+        }
+    }
+}

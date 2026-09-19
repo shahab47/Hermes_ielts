@@ -1,0 +1,29 @@
+[Unit]
+Description=IELTS Learning Backend & MCP Service
+After=network.target docker.service postgresql.service
+Requires=docker.service
+
+[Service]
+Type=simple
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/ielts-hermes/apps/learning-service
+Environment=PYTHONUNBUFFERED=1
+Environment=IELTS_DATABASE_URL=postgresql+psycopg://ielts:ielts_prod_password@127.0.0.1:5432/ielts_learning
+ExecStart=/home/ubuntu/ielts-hermes/apps/learning-service/.venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 8000 --workers 2
+Restart=always
+RestartSec=5
+LimitNOFILE=65536
+
+# Security sandbox
+ProtectSystem=full
+ProtectHome=read-only
+ReadWritePaths=/home/ubuntu/ielts-hermes/apps/learning-service /home/ubuntu/ielts-hermes/audio_storage
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=ielts-learning
+
+[Install]
+WantedBy=multi-user.target

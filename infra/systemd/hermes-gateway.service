@@ -1,0 +1,28 @@
+[Unit]
+Description=Hermes Agent Telegram Gateway Service (ielts-tutor profile)
+After=network.target docker.service
+Wants=docker.service
+
+[Service]
+Type=simple
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/ielts-hermes
+EnvironmentFile=/home/ubuntu/.hermes/profiles/ielts-tutor/.env
+ExecStart=/home/ubuntu/.local/bin/hermes -p ielts-tutor gateway run
+Restart=always
+RestartSec=10
+LimitNOFILE=65536
+
+# Security sandbox directives
+ProtectSystem=full
+ProtectHome=read-only
+ReadWritePaths=/home/ubuntu/.hermes /home/ubuntu/ielts-hermes
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=hermes-gateway
+
+[Install]
+WantedBy=multi-user.target
