@@ -1,6 +1,6 @@
 """Copy of Phase 23 memory regression test suite for evals/runner."""
-from pathlib import Path
 import sys
+from pathlib import Path
 
 repo_root = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(repo_root / "apps" / "learning-service"))

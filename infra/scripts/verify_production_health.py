@@ -4,7 +4,7 @@
 import argparse
 import json
 import sys
-from urllib import error, request
+from urllib import request
 
 
 def check_endpoint(url: str, name: str) -> bool:
@@ -15,7 +15,7 @@ def check_endpoint(url: str, name: str) -> bool:
             status = data.get("status", "unknown")
             print(f"[OK] {name} ({url}): HTTP {resp.status} - Status: {status}")
             return resp.status == 200 and status in ("ok", "ready")
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001
         print(f"[FAIL] {name} ({url}): Error - {e}", file=sys.stderr)
         return False
 

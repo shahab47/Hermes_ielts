@@ -1,6 +1,6 @@
 """Copy of Phase 21 regression test suite for evals/runner."""
-from pathlib import Path
 import sys
+from pathlib import Path
 
 # Add apps/learning-service to sys.path
 repo_root = Path(__file__).resolve().parent.parent.parent

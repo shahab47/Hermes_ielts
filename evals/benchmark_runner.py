@@ -15,9 +15,7 @@ from pathlib import Path
 repo_root = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(repo_root / "apps" / "learning-service"))
 
-from app.analyzers.bottleneck_detector import BottleneckDetector
 from app.analyzers.writing_verifier import WritingVerifier
-from app.models.error import ErrorCategory
 
 
 def run_writing_benchmarks(data_path: Path) -> dict[str, any]:
@@ -37,7 +35,6 @@ def run_writing_benchmarks(data_path: Path) -> dict[str, any]:
         # 1. Word count verification via WritingVerifier
         preflight = WritingVerifier.verify_task2(essay)
         wc = preflight.word_count
-        wc_valid = preflight.is_word_count_sufficient
 
         # 2. Rubric score calculation
         scores = [float(v) for v in gt_criteria.values()]

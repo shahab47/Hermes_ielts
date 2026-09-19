@@ -10,7 +10,6 @@ Produces a consolidated, portable archive containing:
 import argparse
 import datetime
 import json
-import os
 import shutil
 import sys
 import zipfile
@@ -50,7 +49,7 @@ def main() -> int:
     parser.add_argument("--profile-dir", default=None, help="Path to ~/.hermes/profiles/ielts-tutor")
     args = parser.parse_args()
 
-    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    timestamp = datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%d_%H%M%S")
     backup_root = Path(args.output_dir)
     backup_root.mkdir(parents=True, exist_ok=True)
     
@@ -76,7 +75,7 @@ def main() -> int:
 
         print(f"[OK] Successfully generated portable backup archive: {archive_name}")
         return 0
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001
         print(f"[!] Error during memory export: {e}", file=sys.stderr)
         return 1
     finally:

@@ -3,7 +3,6 @@
 
 import argparse
 import json
-import os
 import shutil
 import sys
 import tempfile
@@ -48,7 +47,7 @@ def main() -> int:
 
             print(f"[OK] Successfully restored {restored} configuration and memory files to: {profile_dir}")
             return 0
-        except Exception as e:
+        except Exception as e:  # noqa: BLE001
             print(f"[!] Failed to restore memory archive: {e}", file=sys.stderr)
             return 1
 
