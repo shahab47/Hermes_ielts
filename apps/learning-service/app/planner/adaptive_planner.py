@@ -88,6 +88,15 @@ class AdaptivePlanner:
         else:
             primary_obj = "Balanced skill maintenance and diagnostic practice"
             rationale = "No single critical bottleneck detected. Focusing on holistic skill transfer."
+            activities.append(
+                PlannedActivity(
+                    activity_type="diagnostic_evaluation",
+                    skill=Skill.WRITING,
+                    title="Diagnostic Baseline Task",
+                    description="Complete a short baseline writing or speaking prompt to diagnose current strengths and weaknesses.",
+                    estimated_minutes=max(int(available_minutes * 0.50), 20),
+                )
+            )
 
         # 3. Integrated Practice (Skill transfer)
         remaining_mins = max(available_minutes - sum(a.estimated_minutes for a in activities), 15)
