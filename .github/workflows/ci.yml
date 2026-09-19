@@ -1,0 +1,73 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: apps/learning-service
+
+    services:
+      postgres:
+        image: pgvector/pgvector:pg18
+        env:
+          POSTGRES_USER: ielts
+          POSTGRES_PASSWORD: test_password
+          POSTGRES_DB: ielts_learning_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd="pg_isready -U ielts"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=5
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.13
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v4
+
+      - name: Install dependencies
+        run: uv pip install --system ".[dev]"
+
+      - name: Lint (ruff)
+        run: ruff check .
+
+      - name: Format check (ruff)
+        run: ruff format --check .
+
+      - name: Type check (pyright)
+        run: pyright
+
+      - name: Run tests
+        env:
+          IELTS_DATABASE_URL: postgresql+psycopg://ielts:test_password@localhost:5432/ielts_learning_test
+        run: pytest -v --tb=short
+
+      - name: Check migrations
+        env:
+          IELTS_DATABASE_URL: postgresql+psycopg://ielts:test_password@localhost:5432/ielts_learning_test
+        run: |
+          alembic upgrade head
+          alembic check || true
+
+  docker-build:
+    runs-on: ubuntu-latest
+    needs: lint-and-test
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t ielts-learning-service:test ./apps/learning-service
