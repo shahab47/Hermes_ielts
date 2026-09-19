@@ -1,14 +1,14 @@
 """Repository for learner data access."""
+
 from __future__ import annotations
 
 import uuid
-from typing import Optional, Sequence
 
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import selectinload
 
-from app.models.learner import Learner, SkillState, Skill
+from app.models.learner import Learner, Skill, SkillState
 from app.schemas.learner import LearnerCreate
 
 
@@ -31,31 +31,26 @@ class LearnerRepository:
         await self._session.flush()
         return learner
 
-    async def get_by_id(self, learner_id: uuid.UUID) -> Optional[Learner]:
+    async def get_by_id(self, learner_id: uuid.UUID) -> Learner | None:
         """Get a learner by ID."""
         return await self._session.get(Learner, learner_id)
 
-    async def get_by_external_id(self, external_user_id: str) -> Optional[Learner]:
+    async def get_by_external_id(self, external_user_id: str) -> Learner | None:
         """Get a learner by external user ID."""
-        result = await self._session.execute(
-            select(Learner).where(Learner.external_user_id == external_user_id)
-        )
+        result = await self._session.execute(select(Learner).where(Learner.external_user_id == external_user_id))
         return result.scalar_one_or_none()
 
-    async def get_with_skill_states(self, learner_id: uuid.UUID) -> Optional[Learner]:
+    async def get_with_skill_states(self, learner_id: uuid.UUID) -> Learner | None:
         """Get a learner with all skill states loaded."""
         result = await self._session.execute(
-            select(Learner)
-            .where(Learner.id == learner_id)
-            .options(selectinload(Learner.skill_states))
+            select(Learner).where(Learner.id == learner_id).options(selectinload(Learner.skill_states))
         )
         return result.scalar_one_or_none()
 
-    async def get_skill_state(self, learner_id: uuid.UUID, skill: Skill) -> Optional[SkillState]:
+    async def get_skill_state(self, learner_id: uuid.UUID, skill: Skill) -> SkillState | None:
         """Get a specific skill state."""
         result = await self._session.execute(
-            select(SkillState)
-            .where(SkillState.learner_id == learner_id, SkillState.skill == skill)
+            select(SkillState).where(SkillState.learner_id == learner_id, SkillState.skill == skill)
         )
         return result.scalar_one_or_none()
 

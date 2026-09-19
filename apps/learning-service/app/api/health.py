@@ -1,7 +1,8 @@
 """Health check endpoints."""
+
 from __future__ import annotations
 
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from typing import Any
 
 import structlog
@@ -19,7 +20,7 @@ async def health_check() -> dict[str, Any]:
         "status": "healthy",
         "service": "ielts-learning-service",
         "version": "0.1.0",
-        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "timestamp": datetime.now(UTC).isoformat(),
     }
 
 
@@ -35,5 +36,5 @@ async def readiness_check() -> dict[str, Any]:
     return {
         "status": overall,
         "checks": checks,
-        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "timestamp": datetime.now(UTC).isoformat(),
     }

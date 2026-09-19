@@ -1,0 +1,27 @@
+[
+  {
+    "id": "eval_sp2_band7_5",
+    "target_band": 7.5,
+    "part": "part_2",
+    "cue_card_topic": "Describe an energetic person that you know.",
+    "transcript": "Well, the first person that immediately springs to mind when thinking about boundless energy is my elder cousin, Daniel. He's an architect in his early thirties, and he seems to operate on a completely different frequency compared to most people I know. I've known him basically my entire life, but I really started observing his routine when we shared an apartment during our university years in Manchester.\n\nWhat truly sets him apart is his relentless daily schedule. He usually wakes up around 5:30 in the morning to go for a brisk ten-kilometer run, regardless of the weather. After that, he heads straight to his firm where he handles demanding architectural blueprints and site visits. Even after a grueling nine-hour workday, rather than unwinding on the couch, he regularly volunteers at a local youth boxing club where he coaches underprivileged teenagers.\n\nI think he gets this drive from a profound passion for staying active and making a tangible impact on his community. Whenever I'm feeling a bit lethargic or procrastinating on a deadline, just being around his infectious enthusiasm gives me a massive boost. He has this uncanny ability to make you feel that twenty-four hours in a day is more than enough time to accomplish your goals if you manage your focus effectively.",
+    "speech_metrics": {
+      "duration_seconds": 115,
+      "words_count": 218,
+      "speech_rate_wpm": 113.7,
+      "pause_ratio": 0.18,
+      "filler_count": 2
+    },
+    "ground_truth_criteria": {
+      "fluency_and_coherence": 7.5,
+      "lexical_resource": 8.0,
+      "grammatical_range_and_accuracy": 7.5,
+      "pronunciation": 7.5
+    },
+    "key_evidence": [
+      "Natural discourse markers and signposting: 'Well, the first person that immediately springs to mind...'",
+      "Rich idiomatic and flexible vocabulary: 'boundless energy', 'operate on a completely different frequency', 'relentless daily schedule', 'grueling', 'infectious enthusiasm'",
+      "Consistent structural progression without unnatural pauses"
+    ]
+  }
+]

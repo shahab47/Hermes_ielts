@@ -1,17 +1,18 @@
 """Tests for Pydantic schemas."""
+
 from __future__ import annotations
 
 import uuid
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
-from app.schemas.learner import LearnerCreate, LearnerRead
-from app.schemas.attempt import AttemptCreate, AssessmentCreate, CriterionScoreCreate
-from app.schemas.error import ErrorEventCreate
-from app.schemas.learning_item import LearningItemCreate, ReviewSubmit
-from app.models.learner import Skill
 from app.models.attempt import AttemptSource
 from app.models.error import ErrorCategory, ErrorSeverity
-from app.models.learning_item import ItemType, ReviewRating, ReviewType
+from app.models.learner import Skill
+from app.models.learning_item import ReviewRating, ReviewType
+from app.schemas.attempt import AssessmentCreate, AttemptCreate, CriterionScoreCreate
+from app.schemas.error import ErrorEventCreate
+from app.schemas.learner import LearnerCreate
+from app.schemas.learning_item import ReviewSubmit
 
 
 def test_learner_create_defaults() -> None:
@@ -28,7 +29,7 @@ def test_attempt_create_validation() -> None:
         learner_id=uuid.uuid4(),
         skill=Skill.WRITING,
         task_type="writing_task2",
-        submitted_at=datetime.now(timezone.utc),
+        submitted_at=datetime.now(UTC),
         source=AttemptSource.TELEGRAM_TEXT,
         raw_input="This is a test essay...",
     )
@@ -49,7 +50,10 @@ def test_assessment_create_with_criteria() -> None:
                 criterion="task_achievement",
                 score=7.0,
                 confidence=0.85,
-                evidence_json={"positive": ["Clear position"], "limiting": ["Underdeveloped conclusion"]},
+                evidence_json={
+                    "positive": ["Clear position"],
+                    "limiting": ["Underdeveloped conclusion"],
+                },
             ),
         ],
     )

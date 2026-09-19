@@ -1,0 +1,38 @@
+[
+  {
+    "id": "eval_w2_band8",
+    "target_band": 8.0,
+    "task_type": "writing_task2",
+    "prompt": "Some people believe that unpaid community service should be a compulsory part of high school programmes. To what extent do you agree or disagree?",
+    "essay": "It is often argued that high school curricula ought to mandate a period of voluntary community work for all students. In my opinion, whilst such initiatives foster civic responsibility and cultivate essential soft skills, making them strictly obligatory could breed resentment and undermine the very altruism they intend to instill. Therefore, I largely disagree with compulsory enforcement, advocating instead for strong institutional incentives.\n\nProponents of mandatory service reasonably point to its character-building virtues. Engaging in volunteer activities—such as mentoring disadvantaged youths or assisting at eldercare facilities—exposes adolescents to societal realities beyond their academic bubbles. These experiences nurture empathy and equip students with interpersonal capabilities that conventional textbooks cannot replicate. Moreover, community engagement can enhance university admissions portfolios, giving proactive applicants a tangible edge in competitive environments.\n\nNevertheless, compelling teenagers to perform 'unpaid work' risks transforming a noble endeavor into an unwelcome chore. High school students already grapple with formidable academic pressures and extracurricular commitments. Imposing compulsory service hours might exacerbate adolescent stress levels and prompt superficial compliance, where individuals merely 'tick boxes' rather than genuinely connecting with community needs. A more sustainable paradigm involves integrating community projects into elective coursework and rewarding exemplary participation with academic commendations or scholarship recognition.\n\nIn conclusion, although the civic benefits of community involvement are undeniable, mandating participation risks alienating the youth. Educational institutions should inspire altruism through structured encouragement and meaningful rewards rather than rigid compulsion.",
+    "ground_truth_criteria": {
+      "task_response": 8.0,
+      "coherence_and_cohesion": 8.0,
+      "lexical_resource": 8.0,
+      "grammatical_range_and_accuracy": 8.0
+    },
+    "key_evidence": [
+      "Presents a clear, well-developed position throughout",
+      "Sophisticated lexical range: 'foster civic responsibility', 'superficial compliance', 'rigid compulsion'",
+      "Wide range of complex syntactic structures with high accuracy"
+    ]
+  },
+  {
+    "id": "eval_w2_band5",
+    "target_band": 5.0,
+    "task_type": "writing_task2",
+    "prompt": "Some people believe that unpaid community service should be a compulsory part of high school programmes. To what extent do you agree or disagree?",
+    "essay": "Nowadays many people talk about community service in high school. Some think it must be compulsory for students. I agree with this idea because it has good things for society and students.\n\nFirst of all, community service help students to learn many things. For example, when they work in hospital or help old people, they understand how to be kind. Also they can make friends with other people. If they only study books in school, they cannot know the real world.\n\nSecond reason is that it help the city. Many cities need people to clean streets and help poor children. High school students have many free time in summer, so they can do this work without money. It is good for government because they do not pay money for workers.\n\nOn the other hand, some students have too much homework and exam. They must study hard to go to university. But I think they can find some hours in weekend.\n\nTo conclude, community service is very useful. Government should make rule for high schools to do this programme.",
+    "ground_truth_criteria": {
+      "task_response": 5.5,
+      "coherence_and_cohesion": 5.0,
+      "lexical_resource": 5.0,
+      "grammatical_range_and_accuracy": 5.0
+    },
+    "key_evidence": [
+      "Repetitive vocabulary and simple connectors ('First of all', 'Second reason is')",
+      "Frequent grammatical errors: 'help students' (agreement), 'have many free time' (countability)",
+      "Limited sentence variety; ideas are stated but lack depth of explanation"
+    ]
+  }
+]

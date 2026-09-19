@@ -1,17 +1,20 @@
 """Alembic environment configuration."""
+
 from __future__ import annotations
 
 import asyncio
 from logging.config import fileConfig
 
-from alembic import context
 from sqlalchemy import pool
 from sqlalchemy.ext.asyncio import async_engine_from_config
+
+from alembic import context
 
 # Import the Base metadata for autogenerate support
 # This will be populated as models are added in Phase 3
 try:
     from app.models.base import Base
+
     target_metadata = Base.metadata
 except ImportError:
     target_metadata = None
