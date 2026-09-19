@@ -67,17 +67,12 @@ async def handle_jsonrpc_request(request: dict[str, Any]) -> dict[str, Any]:
 
 
 async def run_stdio_server() -> None:
-    """Run interactive stdio JSON-RPC loop."""
-    loop = asyncio.get_running_loop()
-    reader = asyncio.StreamReader()
-    protocol = asyncio.StreamReaderProtocol(reader)
-    await loop.connect_read_pipe(lambda: protocol, sys.stdin)
-
+    """Run interactive stdio JSON-RPC loop compatible with Windows, Linux, and macOS."""
     while True:
-        line = await reader.readline()
-        if not line:
+        line_bytes = await asyncio.to_thread(sys.stdin.buffer.readline)
+        if not line_bytes:
             break
-        raw_text = line.decode("utf-8").strip()
+        raw_text = line_bytes.decode("utf-8", errors="replace").strip()
         if not raw_text:
             continue
 
