@@ -1,51 +1,86 @@
 # IELTS Personal Learning Agent — Hermes Configuration
 # Profile: ielts-tutor
+# Compatible with Hermes Agent v0.21.0+ (and forward-compatible with v0.21.3)
 
+# =============================================================================
 # Model Configuration
-# Choose the best model based on evaluator benchmark results
+# =============================================================================
 model:
   default: "anthropic/claude-sonnet-4-20250514"  # Configurable per evaluator benchmark
   provider: "openrouter"
   base_url: "https://openrouter.ai/api/v1"
 
-# Memory Configuration
+# =============================================================================
+# Terminal & Workspace Execution (Preserves Coding Agent Capabilities)
+# =============================================================================
+terminal:
+  backend: "local"
+  cwd: "."
+  timeout: 180
+  home_mode: "auto"
+  lifetime_seconds: 300
+
+# =============================================================================
+# Memory Configuration (Built-in + Honcho External Provider)
+# =============================================================================
 memory:
   provider: "honcho"
   memory_enabled: true
   user_profile_enabled: true
   memory_char_limit: 2200
+  user_char_limit: 1375
+  nudge_interval: 10
 
-# Telegram Gateway
+# =============================================================================
+# Skills Configuration
+# =============================================================================
+skills:
+  external_dirs:
+    - "./hermes/skills"
+    - "./.agents/skills"
+
+# =============================================================================
+# Telegram Gateway Platform (Single-User Security Lock)
+# =============================================================================
+platforms:
+  telegram:
+    enabled: true
+    reply_to_mode: "first"
+    extra:
+      # CRITICAL SECURITY: Replace with your exact numeric Telegram User ID.
+      # All messages from IDs not listed here will be blocked before event processing.
+      allow_from: []  # Example: [123456789]
+      allowed_chats: []  # Optional: restrict to specific private or group chat IDs
+
 messaging:
   telegram:
-    allowed_users: []  # REQUIRED: Add your numeric Telegram user ID
-    # Example: allowed_users: [123456789]
+    allowed_users: []  # Dual compatibility for legacy/alternate gateway loaders
 
-# Text-to-Speech
+# =============================================================================
+# Voice Pipelines (Speech-to-Text & Text-to-Speech)
+# =============================================================================
 tts:
   provider: "edge"
-  voice: "en-GB-SoniaNeural"  # Clear UK English female voice
+  voice: "en-GB-SoniaNeural"  # Clear British English female RP voice
   speed: 1.0
-  # Alternative voices:
-  # en-GB-RyanNeural (male, UK)
-  # en-GB-LibbyNeural (female, UK)
-  # en-US-JennyNeural (female, US)
 
-# Speech-to-Text
 stt:
   provider: "faster-whisper"
-  model: "small"  # Options: tiny, base, small, medium, large-v3
-  language: "en"   # English language hint for better accuracy
-  # Use 'medium' or 'large-v3' on GPU-equipped hardware
-  # Use 'small' or 'base' on CPU-only VPS
+  model: "small"  # Options: base, small, medium, large-v3
+  language: "en"   # English language transcription hint
 
-# Cron / Scheduled Routines
+# =============================================================================
+# Cron / Autonomous Scheduling
+# =============================================================================
 cron:
-  allow_agent_scheduling: false  # Keep fixed, version-controlled routines initially
+  allow_agent_scheduling: false  # Static version-controlled routines initially
 
-# MCP Servers
+# =============================================================================
+# Model Context Protocol (MCP) Boundary
+# =============================================================================
 mcp_servers:
   ielts-learning:
     command: "uvx"
     args: ["--from", "./apps/learning-service", "ielts-learning-mcp"]
-    # Provides: get_learner_profile, save_assessment, get_due_reviews, etc.
+    env:
+      IELTS_DATABASE_URL: "postgresql+psycopg://ielts:ielts_dev_password@localhost:5432/ielts_learning"
